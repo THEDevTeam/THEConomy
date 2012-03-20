@@ -1,0 +1,8 @@
+name: ${project.name}
+version: ${project.version}
+description: ${project.description}
+author: AlbireoX
+website: ${project.url}
+
+main: net.thedevteam.theconomy.THEConomy
+platform: BOTH
