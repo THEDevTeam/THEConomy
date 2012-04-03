@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<persistence>
+    <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
+        <provider>
+            org.apache.openjpa.persistence.PersistenceProviderImpl
+        </provider>
+        <class>net.thedevteam.theconomy.Account</class>
+        <properties>
+            <property name="openjpa.ConnectionURL"          value="jdbc:derby://localhost:1527/D:\OpenJPA\Derby\testdb;create=true"/>
+            <property name="openjpa.ConnectionDriverName" 
+            value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="openjpa.ConnectionUserName" value="admin"/>
+            <property name="openjpa.ConnectionPassword" value="admin"/>
+    <property name="openjpa.Log" value="SQL=TRACE"/>
+        </properties>
+    </persistence-unit>
+</persistence>
