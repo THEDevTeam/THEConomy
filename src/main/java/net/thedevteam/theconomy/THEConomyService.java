@@ -25,16 +25,16 @@ public class THEConomyService extends EconomyService {
 
     @Override
     public double get(String string) {
-        Account account = plugin.getAccount(string);
+        Account account = plugin.getDM().getAccount(string);
         return account.getBalance();
     }
 
     @Override
     public boolean withdraw(String string, double d) {
         if(has(string,d)){
-        	Account account = plugin.getAccount(string);
+        	Account account = plugin.getDM().getAccount(string);
         	account.setBalance(account.getBalance() - d);
-        	plugin.updateAccount(account);
+        	plugin.getDM().updateAccount(account);
         	return true;
         }
         return false;
@@ -42,9 +42,9 @@ public class THEConomyService extends EconomyService {
 
     @Override
     public boolean deposit(String string, double d) {
-    	Account account = plugin.getAccount(string);
+    	Account account = plugin.getDM().getAccount(string);
     	account.setBalance(account.getBalance() + d);
-    	plugin.updateAccount(account);
+    	plugin.getDM().updateAccount(account);
     	return true;
     }
     
